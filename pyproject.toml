@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "certdeck"
+version = "0.1.0"
+description = "TLS certificate monitor: domain table, expiry warnings, chain and trust details"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = ["PySide6-Essentials>=6.5", "cryptography>=41", "numpy>=1.24"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+certdeck = "certdeck.__main__:main"
+
+[tool.setuptools]
+packages = ["certdeck"]
+
+[tool.setuptools.package-data]
+certdeck = ["certdeck.svg"]
+
+[tool.pytest.ini_options]
+pythonpath = [".", "tests"]
+testpaths = ["tests"]

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Cert Deck
+Comment=TLS certificate monitor
+Exec=@EXEC@
+Icon=@ICON@
+Terminal=false
+Categories=Network;Utility;
